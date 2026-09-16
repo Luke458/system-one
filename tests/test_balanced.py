@@ -33,3 +33,10 @@ def test_fields_and_large_choices():
     assert len(result['more'].option_orders)==6
     assert result['more'].probabilities==pytest.approx([1/6]*6,abs=1e-7)
     with pytest.raises(ValueError):model.decide_balanced('',{})
+
+
+def test_internal_alias_does_not_dispatch_unrelated_compiled_head():
+    model=DecisionModel(FakeLM(),Tokenizer())
+    model._compiled_heads['0:0']=object()
+    result=model.decide_balanced('',{'flag':Boolean('?')})['flag']
+    assert result.probabilities==pytest.approx((.5,.5),abs=1e-7)

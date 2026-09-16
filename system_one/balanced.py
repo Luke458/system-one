@@ -52,6 +52,8 @@ def decide_balanced(model,context,fields,*,execution='batched'):
         groups[name]=[]
         for index,order in enumerate(option_orders(len(field.values))):
             alias=f'{len(groups)-1}:{index}'
+            while alias in model._compiled_heads or alias in expanded:
+                alias = '_' + alias
             expanded[alias]=field;orders[alias]=order;groups[name].append(alias)
     variants=model.decide(context,expanded,option_orders=orders,execution=execution)
     result={}
