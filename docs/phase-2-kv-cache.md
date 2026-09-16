@@ -6,7 +6,7 @@ Implemented as an opt-in execution strategy:
 result = model.decide(context, fields, execution="shared_prefix")
 ```
 
-The default remains `execution="batched"`. Shared prefill can lose at short contexts or with one field. It does not improve semantic correctness, calibrate confidence, or implement Jev/RLCD.
+The default remains `execution="batched"`. Shared prefill can lose at short contexts or with one field. It does not improve semantic correctness or calibrate confidence.
 
 ## Implementation
 

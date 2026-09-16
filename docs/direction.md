@@ -1,6 +1,6 @@
 # Semantic decision runtime: implementation status
 
-The user-authored `Related Work and Updated Project Direction.md` is the project direction. Its related-work claims are research leads, not independently verified findings of this repository. This project makes no novelty or Jev/RLCD reproduction claim.
+The project aims to provide a model-agnostic runtime for typed semantic decisions, with dynamic inference, calibration, compiled classifiers and explicit fallback routing.
 
 The stable abstraction is `context + typed questions → distributions`. MiniCPM5-2B is the first tested full checkpoint, not a mandatory architecture. Preserve explicit question strings and class ordering while the API matures; the shorthand constructors and attribute-access examples in the direction document are proposals rather than implemented compatibility contracts.
 

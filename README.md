@@ -2,7 +2,7 @@
 
 An experimental semantic decision runtime for ordinary Hugging Face causal language models. Return typed Boolean/Choice distributions directly from logits, reuse context prefill across fields, or compile repeated fields into lightweight classifiers over a frozen model's hidden states.
 
-MiniCPM5-2B is the first full checkpoint tested. This is not a reproduction of Jev, TypeSafe's architecture, or RLCD. The original zero-shot method is prompt-sensitive; all reported quality measurements are small synthetic experiments.
+MiniCPM5-2B is the first full checkpoint tested. The original zero-shot method is prompt-sensitive; all reported quality measurements are small synthetic experiments.
 
 ## Install
 
@@ -146,4 +146,4 @@ OMP_NUM_THREADS=4 python -m scripts.demo_compiled_heads
 
 These commands download/load weights as needed and overwrite their named report files; the compiled demo creates a new timestamped ignored artifact directory. Tests use fake models and tiny randomly initialized Transformers, with no checkpoint download. GPU experiments are separate from CPU CI.
 
-Historical reports record the actual tested settings and limitations. They are not production benchmarks or direct comparisons with Jev. [Project direction](docs/direction.md) distinguishes implemented work from remaining research. The user-authored [related-work document](Related%20Work%20and%20Updated%20Project%20Direction.md) contains research leads whose external claims have not all been independently verified.
+Historical reports record the actual tested settings and limitations. They are not production benchmarks. [Project direction](docs/direction.md) distinguishes implemented work from remaining research.

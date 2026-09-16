@@ -6,7 +6,7 @@ The initial architecture now includes compiled frozen-LM heads and an explicit f
 
 Three heads were fitted from 12 synthetic development contexts, with fixed final-layer mean pooling, 8 PCA components and L2-regularized softmax classifiers. All three heads were saved as safetensors/JSON, removed from the model registry and reloaded. They served automatically through `model.decide`.
 
-On 16 previously used synthetic evaluation cases, compiled-head field accuracy was **77.1%** (37/48 labels). The prior balanced zero-shot configuration scored 31/48 (64.6%) on that set. This dataset was already used in earlier experiments; the result is integration evidence and an exploratory comparison, not a fresh generalization claim or a Jev comparison.
+On 16 previously used synthetic evaluation cases, compiled-head field accuracy was **77.1%** (37/48 labels). The prior balanced zero-shot configuration scored 31/48 (64.6%) on that set. This dataset was already used in earlier experiments; the result is integration evidence and an exploratory comparison, not a fresh generalization claim.
 
 Median recorded end-to-end compiled call: **25.3 ms** across these 16 short contexts, for all three fields sharing one feature forward. This is not a controlled performance study.
 
