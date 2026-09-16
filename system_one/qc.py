@@ -17,4 +17,3 @@ CASES = [
     {"id": "unknown", "context": "Sales fell 20%. No store counts, product counts, source receipts, or pipeline logs are available. There is insufficient evidence to identify the cause or establish a pipeline fault.",
      "expected": {"data_issue": False, "cause": "insufficient_evidence", "escalate": False}},
 ]
-

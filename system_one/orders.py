@@ -6,4 +6,3 @@ def option_orders(n):
     if n <= 4:
         return list(itertools.permutations(range(n)))
     return [tuple((i+j) % n for j in range(n)) for i in range(n)]
-
