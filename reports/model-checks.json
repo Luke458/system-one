@@ -1,0 +1,56 @@
+{
+  "revision": "12a3808a956f869c767195e9266b59c4d21d92e2",
+  "checks": {
+    "data_issue": {
+      "batch_value": true,
+      "single_value": true,
+      "max_logit_delta": 0.25,
+      "eager_value": true,
+      "eager_max_logit_delta": 0.25
+    },
+    "cause": {
+      "batch_value": "insufficient_evidence",
+      "single_value": "insufficient_evidence",
+      "max_logit_delta": 0.25,
+      "eager_value": "insufficient_evidence",
+      "eager_max_logit_delta": 0.25
+    },
+    "escalate": {
+      "batch_value": true,
+      "single_value": true,
+      "max_logit_delta": 0.25,
+      "eager_value": true,
+      "eager_max_logit_delta": 0.25
+    }
+  },
+  "26_candidate_ids": [
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79
+  ],
+  "greedy_first_token_for_cause": "D",
+  "candidate_argmax_label": "D"
+}

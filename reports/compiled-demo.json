@@ -1,0 +1,1001 @@
+{
+  "model": "openbmb/MiniCPM5-2B",
+  "revision": "12a3808a956f869c767195e9266b59c4d21d92e2",
+  "layer": -1,
+  "components": 8,
+  "fits": {
+    "data_issue": {
+      "seconds": 1.3349932929995703,
+      "training_n": 12
+    },
+    "cause": {
+      "seconds": 0.07458236700040288,
+      "training_n": 12
+    },
+    "escalate": {
+      "seconds": 0.07112911399599398,
+      "training_n": 12
+    }
+  },
+  "training_ids": [
+    "dev-missing_stores-0",
+    "dev-missing_stores-1",
+    "dev-missing_stores-2",
+    "dev-missing_products-0",
+    "dev-missing_products-1",
+    "dev-missing_products-2",
+    "dev-real_market_movement-0",
+    "dev-real_market_movement-1",
+    "dev-real_market_movement-2",
+    "dev-insufficient_evidence-0",
+    "dev-insufficient_evidence-1",
+    "dev-insufficient_evidence-2"
+  ],
+  "evaluation_ids": [
+    "fresh-missing_stores-0",
+    "fresh-missing_stores-1",
+    "fresh-missing_stores-2",
+    "fresh-missing_stores-3",
+    "fresh-missing_products-0",
+    "fresh-missing_products-1",
+    "fresh-missing_products-2",
+    "fresh-missing_products-3",
+    "fresh-real_market_movement-0",
+    "fresh-real_market_movement-1",
+    "fresh-real_market_movement-2",
+    "fresh-real_market_movement-3",
+    "fresh-insufficient_evidence-0",
+    "fresh-insufficient_evidence-1",
+    "fresh-insufficient_evidence-2",
+    "fresh-insufficient_evidence-3"
+  ],
+  "accuracy": 0.7708333333333334,
+  "fields": {
+    "data_issue": {
+      "n": 16,
+      "accuracy": 0.8125,
+      "brier": 0.27402775058143725,
+      "ece": 0.12213176116347317,
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 2,
+          "confidence": 0.587810218334198,
+          "accuracy": 0.5
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 1,
+          "confidence": 0.6745388507843018,
+          "accuracy": 1.0
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 2,
+          "confidence": 0.7536702752113342,
+          "accuracy": 0.5
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 2,
+          "confidence": 0.8629903793334961,
+          "accuracy": 1.0
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 9,
+          "confidence": 0.9635185334417555,
+          "accuracy": 0.8888888888888888
+        }
+      ],
+      "risk_coverage": [
+        {
+          "threshold": 0.5,
+          "accepted": 16,
+          "coverage": 1.0,
+          "error_rate": 0.1875
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 9,
+          "coverage": 0.5625,
+          "error_rate": 0.1111111111111111
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 6,
+          "coverage": 0.375,
+          "error_rate": 0.16666666666666666
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 2,
+          "coverage": 0.125,
+          "error_rate": 0.0
+        },
+        {
+          "threshold": 0.995,
+          "accepted": 1,
+          "coverage": 0.0625,
+          "error_rate": 0.0
+        }
+      ]
+    },
+    "cause": {
+      "n": 16,
+      "accuracy": 0.6875,
+      "brier": 0.3364087646413979,
+      "ece": 0.1800098456442356,
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 1,
+          "confidence": 0.3642500936985016,
+          "accuracy": 0.0
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 2,
+          "confidence": 0.4335490018129349,
+          "accuracy": 0.0
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 4,
+          "confidence": 0.6783702224493027,
+          "accuracy": 0.75
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 3,
+          "confidence": 0.7569819092750549,
+          "accuracy": 1.0
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 3,
+          "confidence": 0.8476563493410746,
+          "accuracy": 0.6666666666666666
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 3,
+          "confidence": 0.96991099913915,
+          "accuracy": 1.0
+        }
+      ],
+      "risk_coverage": [
+        {
+          "threshold": 0.5,
+          "accepted": 13,
+          "coverage": 0.8125,
+          "error_rate": 0.15384615384615385
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 3,
+          "coverage": 0.1875,
+          "error_rate": 0.0
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 3,
+          "coverage": 0.1875,
+          "error_rate": 0.0
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        },
+        {
+          "threshold": 0.995,
+          "accepted": 0,
+          "coverage": 0.0,
+          "error_rate": null
+        }
+      ]
+    },
+    "escalate": {
+      "n": 16,
+      "accuracy": 0.8125,
+      "brier": 0.27402775058143725,
+      "ece": 0.12213176116347317,
+      "reliability": [
+        {
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 0,
+          "confidence": null,
+          "accuracy": null
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 2,
+          "confidence": 0.587810218334198,
+          "accuracy": 0.5
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 1,
+          "confidence": 0.6745388507843018,
+          "accuracy": 1.0
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 2,
+          "confidence": 0.7536702752113342,
+          "accuracy": 0.5
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 2,
+          "confidence": 0.8629903793334961,
+          "accuracy": 1.0
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 9,
+          "confidence": 0.9635185334417555,
+          "accuracy": 0.8888888888888888
+        }
+      ],
+      "risk_coverage": [
+        {
+          "threshold": 0.5,
+          "accepted": 16,
+          "coverage": 1.0,
+          "error_rate": 0.1875
+        },
+        {
+          "threshold": 0.9,
+          "accepted": 9,
+          "coverage": 0.5625,
+          "error_rate": 0.1111111111111111
+        },
+        {
+          "threshold": 0.95,
+          "accepted": 6,
+          "coverage": 0.375,
+          "error_rate": 0.16666666666666666
+        },
+        {
+          "threshold": 0.99,
+          "accepted": 2,
+          "coverage": 0.125,
+          "error_rate": 0.0
+        },
+        {
+          "threshold": 0.995,
+          "accepted": 1,
+          "coverage": 0.0625,
+          "error_rate": 0.0
+        }
+      ]
+    }
+  },
+  "notes": [
+    "Synthetic demo; fixed hyperparameters, no tuning or calibration.",
+    "PCA/whitening and linear heads fitted on development training examples only.",
+    "Evaluation set was used in earlier model comparisons; not a fresh confirmatory evaluation.",
+    "Backbone remains frozen. Three same-layer heads share a context feature forward during decide."
+  ],
+  "rows": [
+    {
+      "id": "fresh-missing_stores-0",
+      "latency_ms": 89.97343199735042,
+      "fields": {
+        "data_issue": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.1658616065979004,
+            0.8341383934020996
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "missing_stores",
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.7903668880462646,
+            0.046452414244413376,
+            0.05609919875860214,
+            0.10708149522542953
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.1658616065979004,
+            0.8341383934020996
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-missing_stores-1",
+      "latency_ms": 25.239219998184126,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 1,
+          "correct": false,
+          "probabilities": [
+            0.709972620010376,
+            0.29002732038497925
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "real_market_movement",
+          "label": 0,
+          "correct": false,
+          "probabilities": [
+            0.392796128988266,
+            0.03587626293301582,
+            0.4436858296394348,
+            0.12764188647270203
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 1,
+          "correct": false,
+          "probabilities": [
+            0.709972620010376,
+            0.29002732038497925
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-missing_stores-2",
+      "latency_ms": 24.398419001954608,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 1,
+          "correct": false,
+          "probabilities": [
+            0.9720763564109802,
+            0.027923623099923134
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "real_market_movement",
+          "label": 0,
+          "correct": false,
+          "probabilities": [
+            0.16759589314460754,
+            0.0014974012738093734,
+            0.8002539873123169,
+            0.03065267577767372
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 1,
+          "correct": false,
+          "probabilities": [
+            0.9720763564109802,
+            0.027923623099923134
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-missing_stores-3",
+      "latency_ms": 24.185545000364073,
+      "fields": {
+        "data_issue": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.07978203892707825,
+            0.9202179908752441
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "missing_stores",
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.8805485367774963,
+            0.024166828021407127,
+            0.02338898926973343,
+            0.07189567387104034
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.07978203892707825,
+            0.9202179908752441
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-missing_products-0",
+      "latency_ms": 24.24456999870017,
+      "fields": {
+        "data_issue": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.42359134554862976,
+            0.5764085650444031
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "missing_products",
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.02630077302455902,
+            0.6938985586166382,
+            0.18742650747299194,
+            0.09237411618232727
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.42359134554862976,
+            0.5764085650444031
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-missing_products-1",
+      "latency_ms": 24.302181001985446,
+      "fields": {
+        "data_issue": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.3254612386226654,
+            0.6745388507843018
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "missing_stores",
+          "label": 1,
+          "correct": false,
+          "probabilities": [
+            0.42341217398643494,
+            0.18003524839878082,
+            0.2167949378490448,
+            0.17975762486457825
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.3254612386226654,
+            0.6745388507843018
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-missing_products-2",
+      "latency_ms": 24.351928994292393,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 1,
+          "correct": false,
+          "probabilities": [
+            0.5992118716239929,
+            0.40078815817832947
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "real_market_movement",
+          "label": 1,
+          "correct": false,
+          "probabilities": [
+            0.12992611527442932,
+            0.3045421540737152,
+            0.3642500936985016,
+            0.2012815922498703
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 1,
+          "correct": false,
+          "probabilities": [
+            0.5992118716239929,
+            0.40078815817832947
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-missing_products-3",
+      "latency_ms": 24.10180299921194,
+      "fields": {
+        "data_issue": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.10815764963626862,
+            0.8918423652648926
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "missing_products",
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.07717503607273102,
+            0.7214502096176147,
+            0.03851918503642082,
+            0.16285555064678192
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": true,
+          "label": 1,
+          "correct": true,
+          "probabilities": [
+            0.10815764963626862,
+            0.8918423652648926
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-real_market_movement-0",
+      "latency_ms": 24.229261005530134,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.991361677646637,
+            0.008638286963105202
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "real_market_movement",
+          "label": 2,
+          "correct": true,
+          "probabilities": [
+            0.019058281555771828,
+            0.0004235284577589482,
+            0.9782694578170776,
+            0.002248818287625909
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.991361677646637,
+            0.008638286963105202
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-real_market_movement-1",
+      "latency_ms": 25.965221000660677,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.995743453502655,
+            0.0042565446346998215
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "real_market_movement",
+          "label": 2,
+          "correct": true,
+          "probabilities": [
+            0.007115678861737251,
+            0.003246166743338108,
+            0.9703810214996338,
+            0.019257087260484695
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.995743453502655,
+            0.0042565446346998215
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-real_market_movement-2",
+      "latency_ms": 25.33287400001427,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9487580060958862,
+            0.05124194547533989
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "real_market_movement",
+          "label": 2,
+          "correct": true,
+          "probabilities": [
+            0.08713436126708984,
+            0.039810433983802795,
+            0.6378410458564758,
+            0.23521412909030914
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9487580060958862,
+            0.05124194547533989
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-real_market_movement-3",
+      "latency_ms": 25.309828997706063,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9874553680419922,
+            0.012544678524136543
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "real_market_movement",
+          "label": 2,
+          "correct": true,
+          "probabilities": [
+            0.1010763943195343,
+            0.0063173808157444,
+            0.684917151927948,
+            0.2076890468597412
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9874553680419922,
+            0.012544678524136543
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-insufficient_evidence-0",
+      "latency_ms": 25.936675003322307,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9171327352523804,
+            0.08286725729703903
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "label": 3,
+          "correct": true,
+          "probabilities": [
+            0.005181190557777882,
+            0.02924513630568981,
+            0.00449111545458436,
+            0.9610825181007385
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9171327352523804,
+            0.08286725729703903
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-insufficient_evidence-1",
+      "latency_ms": 25.474398004007526,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9864556789398193,
+            0.013544267043471336
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "real_market_movement",
+          "label": 3,
+          "correct": false,
+          "probabilities": [
+            0.0342787429690361,
+            0.029703937470912933,
+            0.6968241333961487,
+            0.23919323086738586
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9864556789398193,
+            0.013544267043471336
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-insufficient_evidence-2",
+      "latency_ms": 25.56868100509746,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9524655342102051,
+            0.04753446578979492
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "label": 3,
+          "correct": true,
+          "probabilities": [
+            0.04060674086213112,
+            0.06749086827039719,
+            0.13277383148670197,
+            0.7591286301612854
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.9524655342102051,
+            0.04753446578979492
+          ],
+          "strategy": "compiled"
+        }
+      }
+    },
+    {
+      "id": "fresh-insufficient_evidence-3",
+      "latency_ms": 25.892439000017475,
+      "fields": {
+        "data_issue": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.7973679304122925,
+            0.20263205468654633
+          ],
+          "strategy": "compiled"
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "label": 3,
+          "correct": true,
+          "probabilities": [
+            0.02360791712999344,
+            0.09123626351356506,
+            0.022989219054579735,
+            0.8621665239334106
+          ],
+          "strategy": "compiled"
+        },
+        "escalate": {
+          "value": false,
+          "label": 0,
+          "correct": true,
+          "probabilities": [
+            0.7973679304122925,
+            0.20263205468654633
+          ],
+          "strategy": "compiled"
+        }
+      }
+    }
+  ]
+}

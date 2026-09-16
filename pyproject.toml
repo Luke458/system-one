@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "system-one-experimental"
+version = "0.2.0"
+description = "Experimental typed decisions, shared-prefix inference, and frozen-LM classifier heads"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["torch>=2.6", "transformers>=5.6.2,<6", "safetensors>=0.4", "huggingface-hub>=0.34"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["system_one*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

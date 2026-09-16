@@ -1,0 +1,106 @@
+[
+  {
+    "id": "eval-0",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      4.0
+    ],
+    "label": 0
+  },
+  {
+    "id": "eval-1",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      4.0
+    ],
+    "label": 1
+  },
+  {
+    "id": "eval-2",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      4.0
+    ],
+    "label": 0
+  },
+  {
+    "id": "eval-3",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      4.0
+    ],
+    "label": 1
+  },
+  {
+    "id": "eval-4",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      4.0
+    ],
+    "label": 0
+  },
+  {
+    "id": "eval-5",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      4.0
+    ],
+    "label": 1
+  },
+  {
+    "id": "eval-6",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      4.0
+    ],
+    "label": 0
+  },
+  {
+    "id": "eval-7",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      4.0
+    ],
+    "label": 1
+  }
+]

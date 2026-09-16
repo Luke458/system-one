@@ -1,0 +1,106 @@
+[
+  {
+    "id": "cal-0",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      5.0
+    ],
+    "label": 0
+  },
+  {
+    "id": "cal-1",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      5.0
+    ],
+    "label": 1
+  },
+  {
+    "id": "cal-2",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      5.0
+    ],
+    "label": 0
+  },
+  {
+    "id": "cal-3",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      5.0
+    ],
+    "label": 1
+  },
+  {
+    "id": "cal-4",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      5.0
+    ],
+    "label": 0
+  },
+  {
+    "id": "cal-5",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      5.0
+    ],
+    "label": 1
+  },
+  {
+    "id": "cal-6",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      5.0
+    ],
+    "label": 0
+  },
+  {
+    "id": "cal-7",
+    "field": "flag",
+    "values": [
+      false,
+      true
+    ],
+    "logits": [
+      0.0,
+      5.0
+    ],
+    "label": 1
+  }
+]

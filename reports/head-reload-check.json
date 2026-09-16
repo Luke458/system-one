@@ -1,0 +1,242 @@
+[
+  {
+    "id": "fresh-missing_stores-0",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-0",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-0",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-1",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-1",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-1",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-2",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-2",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-2",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-3",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-3",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_stores-3",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-0",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-0",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-0",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-1",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-1",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-1",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-2",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-2",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-2",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-3",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-3",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-missing_products-3",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-0",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-0",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-0",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-1",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-1",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-1",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-2",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-2",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-2",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-3",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-3",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-real_market_movement-3",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-0",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-0",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-0",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-1",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-1",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-1",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-2",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-2",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-2",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-3",
+    "field": "data_issue",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-3",
+    "field": "cause",
+    "max_probability_delta": 0.0
+  },
+  {
+    "id": "fresh-insufficient_evidence-3",
+    "field": "escalate",
+    "max_probability_delta": 0.0
+  }
+]

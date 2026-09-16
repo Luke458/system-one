@@ -1,0 +1,94 @@
+{
+  "data_issue": {
+    "value": true,
+    "confidence": 0.9859364032745361,
+    "distribution": [
+      {
+        "value": false,
+        "probability": 0.01406362745910883,
+        "raw_probability": 0.01406362745910883
+      },
+      {
+        "value": true,
+        "probability": 0.9859364032745361,
+        "raw_probability": 0.9859364032745361
+      }
+    ],
+    "logits": [
+      34.25,
+      38.5
+    ],
+    "candidate_mass": 1.0,
+    "token_ids": [
+      54,
+      55
+    ],
+    "temperature": 1.0
+  },
+  "cause": {
+    "value": "insufficient_evidence",
+    "confidence": 0.974928081035614,
+    "distribution": [
+      {
+        "value": "missing_stores",
+        "probability": 0.022928111255168915,
+        "raw_probability": 0.022928111255168915
+      },
+      {
+        "value": "missing_products",
+        "probability": 1.1191102203156333e-05,
+        "raw_probability": 1.1191102203156333e-05
+      },
+      {
+        "value": "real_market_movement",
+        "probability": 0.002132646506652236,
+        "raw_probability": 0.002132646506652236
+      },
+      {
+        "value": "insufficient_evidence",
+        "probability": 0.974928081035614,
+        "raw_probability": 0.974928081035614
+      }
+    ],
+    "logits": [
+      33.0,
+      25.375,
+      30.625,
+      36.75
+    ],
+    "candidate_mass": 1.0,
+    "token_ids": [
+      54,
+      55,
+      56,
+      57
+    ],
+    "temperature": 1.0
+  },
+  "escalate": {
+    "value": true,
+    "confidence": 0.998498797416687,
+    "distribution": [
+      {
+        "value": false,
+        "probability": 0.0015011822106316686,
+        "raw_probability": 0.0015011822106316686
+      },
+      {
+        "value": true,
+        "probability": 0.998498797416687,
+        "raw_probability": 0.998498797416687
+      }
+    ],
+    "logits": [
+      33.75,
+      40.25
+    ],
+    "candidate_mass": 1.0,
+    "token_ids": [
+      54,
+      55
+    ],
+    "temperature": 1.0
+  }
+}

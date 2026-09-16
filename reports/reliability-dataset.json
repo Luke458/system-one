@@ -1,0 +1,242 @@
+[
+  {
+    "id": "dev-missing_stores-0",
+    "split": "dev",
+    "context": "Only 75 of 100 scheduled shops supplied data. Transfer logs confirm the other 25 uploads failed. All product categories are intact for reporting shops.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "dev-missing_stores-1",
+    "split": "dev",
+    "context": "Revenue totals are low because 12 branch files were rejected by the loader. The branches were open and their source receipts exist. Product mappings are complete.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "dev-missing_stores-2",
+    "split": "dev",
+    "context": "The expected 60 outlets all traded today. Warehouse data includes only 40 outlets after a network outage blocked 20 feeds.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "dev-missing_products-0",
+    "split": "dev",
+    "context": "Every store file arrived, but a broken category filter discarded every beverage item. Source files contain the beverages and all other categories.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "dev-missing_products-1",
+    "split": "dev",
+    "context": "All outlet IDs reconcile. The new SKU join dropped ten valid product codes from every store; their source transactions are present.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "dev-missing_products-2",
+    "split": "dev",
+    "context": "Shop coverage is complete. An ingestion bug removed the bakery category while retaining all other product categories.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "dev-real_market_movement-0",
+    "split": "dev",
+    "context": "All stores and SKUs are present, and warehouse totals match source receipts. Foot traffic and purchases declined during a storm; independent counters agree.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "dev-real_market_movement-1",
+    "split": "dev",
+    "context": "Every store and product reconciles with source records. Prices rose and customers bought fewer units. Auditors found no missing data or processing error.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "dev-real_market_movement-2",
+    "split": "dev",
+    "context": "The promotion finished. Complete source and warehouse totals both show lower purchases; every outlet and product is present.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "dev-insufficient_evidence-0",
+    "split": "dev",
+    "context": "Only the sales total is available. It is lower today; coverage, receipt data, and ingestion logs have not been checked.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  },
+  {
+    "id": "dev-insufficient_evidence-1",
+    "split": "dev",
+    "context": "A manager reports an unexpected revenue change. There are no figures for stores or products and no evidence identifying the reason.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  },
+  {
+    "id": "dev-insufficient_evidence-2",
+    "split": "dev",
+    "context": "Sales appear low, but no source reconciliation or pipeline diagnostic has been performed. The cause is unknown.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  },
+  {
+    "id": "eval-missing_stores-0",
+    "split": "eval",
+    "context": "A scheduler skipped 18 of the 90 active locations. Their receipts never entered the reporting table. The remaining locations have their full item ranges.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "eval-missing_stores-1",
+    "split": "eval",
+    "context": "The retail warehouse excludes the northern region after its connector failed. Those outlets were trading normally and retained complete receipts locally.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "eval-missing_stores-2",
+    "split": "eval",
+    "context": "A delivery manifest lists 210 shops; the warehouse contains 203. Logs identify seven store uploads rejected due to a header error. Items from the other 203 are complete.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "eval-missing_products-0",
+    "split": "eval",
+    "context": "Location counts match the manifest exactly. A faulty item whitelist excluded all dairy transactions, although those records exist in the source deliveries.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "eval-missing_products-1",
+    "split": "eval",
+    "context": "All branches reported, but source-to-target reconciliation finds a set of household SKUs absent after a product-code translation failure.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "eval-missing_products-2",
+    "split": "eval",
+    "context": "Each store feed was accepted. A pipeline rule mistakenly deleted the frozen-food lines, making totals incomplete across all locations.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "eval-real_market_movement-0",
+    "split": "eval",
+    "context": "An independent receipt audit matches the reporting system exactly, with complete outlet and item coverage. Fewer customers shopped during roadworks.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "eval-real_market_movement-1",
+    "split": "eval",
+    "context": "All location and item checks pass and every receipt reconciles. A competitor opened nearby; both source receipts and warehouse totals show fewer purchases.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "eval-real_market_movement-2",
+    "split": "eval",
+    "context": "Reported volumes increased after a successful campaign. Full store and product coverage is verified and totals match the original transactions exactly.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "eval-insufficient_evidence-0",
+    "split": "eval",
+    "context": "A chart shows a sharp change in weekly revenue. No completeness checks, source totals, or system logs accompany the chart.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  },
+  {
+    "id": "eval-insufficient_evidence-1",
+    "split": "eval",
+    "context": "The only observation is that revenue differs from forecast. There is no evidence about missing locations, absent items, or genuine changes in demand.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  },
+  {
+    "id": "eval-insufficient_evidence-2",
+    "split": "eval",
+    "context": "An analyst suspects a reporting problem but has supplied no records, coverage counts, or reconciliation results. There is not enough evidence to determine a cause.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  }
+]

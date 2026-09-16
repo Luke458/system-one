@@ -1,0 +1,146 @@
+[
+  {
+    "id": "fresh-missing_stores-0",
+    "context": "The revenue chart fell 8%. Item-level checks pass for every received file. However, an export task failed for 9 active shops, whose complete local receipts never reached reporting. No shops closed.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "fresh-missing_stores-1",
+    "context": "An analyst blames declining demand. The logs instead show that the eastern district store connector timed out: those open shops are absent from reporting. Reporting contains all items from the other shops.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "fresh-missing_stores-2",
+    "context": "Sales remained close to forecast because trading elsewhere was strong, but 6 expected open outlets are missing from the loaded table after their deliveries failed. All items are intact in deliveries that arrived.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "fresh-missing_stores-3",
+    "context": "The branch master and trading calendar confirm 330 locations should report. Only 315 appear. Reconciliation finds the other 15 feeds stuck in a failed queue, not intentionally excluded.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_stores",
+      "escalate": true
+    }
+  },
+  {
+    "id": "fresh-missing_products-0",
+    "context": "All locations appear and their delivery counts match. Source receipts include medicine items, but a warehouse join rejects every medicine SKU after an identifier change. No real assortment removal occurred.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "fresh-missing_products-1",
+    "context": "Total sales increased despite the fault. Every branch uploaded, but a filter accidentally discarded the same two product groups from all uploads. The groups still sold and are present in source receipts.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "fresh-missing_products-2",
+    "context": "A dashboard claims store coverage problems, but every store is verified present. The actual discrepancy is that unmapped apparel items were dropped by an ETL join; raw deliveries contain them.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "fresh-missing_products-3",
+    "context": "Every location file passed transfer checks. A deployment changed an item-code conversion and eliminated toy transactions from the reporting table although those items continue to sell.",
+    "expected": {
+      "data_issue": true,
+      "cause": "missing_products",
+      "escalate": true
+    }
+  },
+  {
+    "id": "fresh-real_market_movement-0",
+    "context": "Twenty stores permanently closed as planned. All remaining active stores and expected products are represented. Receipts reconcile exactly with reporting; the sales decrease is explained by the real closures.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "fresh-real_market_movement-1",
+    "context": "A product line was deliberately discontinued before the period. All products actually sold and all active shops are fully reported. Warehouse totals match receipts, and lower sales reflect the genuine assortment change.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "fresh-real_market_movement-2",
+    "context": "A transfer alarm occurred yesterday but was repaired and all files were backfilled before this report. Complete store and item reconciliation passes. Receipts themselves show demand fell after a price increase.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "fresh-real_market_movement-3",
+    "context": "Observed sales increased by 40% during a festival. Independent receipts confirm that increase exactly, all expected locations and items are present, and no data discrepancy remains.",
+    "expected": {
+      "data_issue": false,
+      "cause": "real_market_movement",
+      "escalate": false
+    }
+  },
+  {
+    "id": "fresh-insufficient_evidence-0",
+    "context": "The chart is unusual and a manager is certain the feed is broken. No ingestion logs, source receipts, or coverage checks have been provided to support that opinion.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  },
+  {
+    "id": "fresh-insufficient_evidence-1",
+    "context": "All stores are listed, but nobody checked whether their item-level records or totals are complete. Revenue is lower, and no reconciliation or demand evidence is available.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  },
+  {
+    "id": "fresh-insufficient_evidence-2",
+    "context": "Product counts appear normal, but store coverage, receipts and processing logs are unavailable. Sales changed and the reason cannot yet be established.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  },
+  {
+    "id": "fresh-insufficient_evidence-3",
+    "context": "An old incident report mentions a connector failure last month. For this week there is only a changed sales total, with no current logs or completeness checks.",
+    "expected": {
+      "data_issue": false,
+      "cause": "insufficient_evidence",
+      "escalate": false
+    }
+  }
+]

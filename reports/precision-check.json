@@ -1,0 +1,332 @@
+{
+  "dtype": "float32",
+  "attention": "eager",
+  "accuracy": 0.4444444444444444,
+  "changed_fields": 0,
+  "rows": [
+    {
+      "id": "dev-missing_stores-0",
+      "field": "data_issue",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.010610461235046387
+    },
+    {
+      "id": "dev-missing_stores-0",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": false,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 0.0023196935653686523
+    },
+    {
+      "id": "dev-missing_stores-0",
+      "field": "escalate",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.00030196993611752987
+    },
+    {
+      "id": "dev-missing_stores-1",
+      "field": "data_issue",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.002906978130340576
+    },
+    {
+      "id": "dev-missing_stores-1",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": false,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 7.414817810058594e-05
+    },
+    {
+      "id": "dev-missing_stores-1",
+      "field": "escalate",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0012342177797108889
+    },
+    {
+      "id": "dev-missing_stores-2",
+      "field": "data_issue",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.003381798043847084
+    },
+    {
+      "id": "dev-missing_stores-2",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": false,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 0.011672690510749817
+    },
+    {
+      "id": "dev-missing_stores-2",
+      "field": "escalate",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.00014787912368774414
+    },
+    {
+      "id": "dev-missing_products-0",
+      "field": "data_issue",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0008489508181810379
+    },
+    {
+      "id": "dev-missing_products-0",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": false,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 0.0016023516654968262
+    },
+    {
+      "id": "dev-missing_products-0",
+      "field": "escalate",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 5.219480954110622e-07
+    },
+    {
+      "id": "dev-missing_products-1",
+      "field": "data_issue",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0009596943855285645
+    },
+    {
+      "id": "dev-missing_products-1",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": false,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 0.08264690637588501
+    },
+    {
+      "id": "dev-missing_products-1",
+      "field": "escalate",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.00011205673217773438
+    },
+    {
+      "id": "dev-missing_products-2",
+      "field": "data_issue",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0002769492566585541
+    },
+    {
+      "id": "dev-missing_products-2",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": false,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 0.015725910663604736
+    },
+    {
+      "id": "dev-missing_products-2",
+      "field": "escalate",
+      "value": true,
+      "correct": true,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.00014278199523687363
+    },
+    {
+      "id": "dev-real_market_movement-0",
+      "field": "data_issue",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0022024884819984436
+    },
+    {
+      "id": "dev-real_market_movement-0",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": false,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 0.004505619406700134
+    },
+    {
+      "id": "dev-real_market_movement-0",
+      "field": "escalate",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0002313852310180664
+    },
+    {
+      "id": "dev-real_market_movement-1",
+      "field": "data_issue",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 8.212774991989136e-05
+    },
+    {
+      "id": "dev-real_market_movement-1",
+      "field": "cause",
+      "value": "real_market_movement",
+      "correct": true,
+      "bf16_value": "real_market_movement",
+      "changed": false,
+      "probability_delta": 0.00170154869556427
+    },
+    {
+      "id": "dev-real_market_movement-1",
+      "field": "escalate",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0005716541782021523
+    },
+    {
+      "id": "dev-real_market_movement-2",
+      "field": "data_issue",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0004640817642211914
+    },
+    {
+      "id": "dev-real_market_movement-2",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": false,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 0.004489252343773842
+    },
+    {
+      "id": "dev-real_market_movement-2",
+      "field": "escalate",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0022215843200683594
+    },
+    {
+      "id": "dev-insufficient_evidence-0",
+      "field": "data_issue",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0047476887702941895
+    },
+    {
+      "id": "dev-insufficient_evidence-0",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": true,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 2.7418136596679688e-06
+    },
+    {
+      "id": "dev-insufficient_evidence-0",
+      "field": "escalate",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 5.5942684412002563e-05
+    },
+    {
+      "id": "dev-insufficient_evidence-1",
+      "field": "data_issue",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0038611292839050293
+    },
+    {
+      "id": "dev-insufficient_evidence-1",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": true,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 1.1920928955078125e-07
+    },
+    {
+      "id": "dev-insufficient_evidence-1",
+      "field": "escalate",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.00019317865371704102
+    },
+    {
+      "id": "dev-insufficient_evidence-2",
+      "field": "data_issue",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.002345263957977295
+    },
+    {
+      "id": "dev-insufficient_evidence-2",
+      "field": "cause",
+      "value": "insufficient_evidence",
+      "correct": true,
+      "bf16_value": "insufficient_evidence",
+      "changed": false,
+      "probability_delta": 1.3808090670863749e-08
+    },
+    {
+      "id": "dev-insufficient_evidence-2",
+      "field": "escalate",
+      "value": true,
+      "correct": false,
+      "bf16_value": true,
+      "changed": false,
+      "probability_delta": 0.0013221502304077148
+    }
+  ]
+}

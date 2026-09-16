@@ -1,0 +1,1780 @@
+{
+  "timestamp_utc": "2026-09-16T07:27:38Z",
+  "model": "openbmb/MiniCPM5-2B",
+  "revision": "12a3808a956f869c767195e9266b59c4d21d92e2",
+  "settings": {
+    "model": "openbmb/MiniCPM5-2B",
+    "revision": "12a3808a956f869c767195e9266b59c4d21d92e2",
+    "device": "cuda",
+    "context_tokens": [
+      128,
+      1024,
+      4096
+    ],
+    "field_counts": [
+      1,
+      4,
+      16
+    ],
+    "batch_size": 4,
+    "repeats": 3,
+    "output": "reports/cache-benchmark.json"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.13.0+rocm10.0.0",
+    "transformers": "5.8.0",
+    "hip": "7.15.26333",
+    "device": "cuda:0",
+    "gpu": "AMD Radeon RX 9070 XT",
+    "dtype": "torch.bfloat16"
+  },
+  "notes": [
+    "End-to-end warm calls including validation, tokenization, cache copies and transfers.",
+    "Cache is rebuilt per call; no cache hits across requests.",
+    "Synthetic repeated fields/filler measure scaling, not semantic accuracy.",
+    "BF16 drift and decision disagreements are reported, not suppressed."
+  ],
+  "qc_parity": [
+    {
+      "case": "stores",
+      "field_count": 3,
+      "decision_disagreements": 0,
+      "max_logit_delta": 0.25,
+      "max_probability_delta": 0.015210986137390137,
+      "max_candidate_mass_delta": 3.814697265625e-06,
+      "batched": {
+        "data_issue": {
+          "value": true,
+          "confidence": 0.9859364032745361,
+          "probability": 0.9859364032745361,
+          "raw_probability": 0.9859364032745361,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.01406362745910883,
+              "raw_probability": 0.01406362745910883
+            },
+            {
+              "value": true,
+              "probability": 0.9859364032745361,
+              "raw_probability": 0.9859364032745361
+            }
+          ],
+          "logits": [
+            34.25,
+            38.5
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "confidence": 0.974928081035614,
+          "probability": 0.974928081035614,
+          "raw_probability": 0.974928081035614,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": "missing_stores",
+              "probability": 0.022928111255168915,
+              "raw_probability": 0.022928111255168915
+            },
+            {
+              "value": "missing_products",
+              "probability": 1.1191102203156333e-05,
+              "raw_probability": 1.1191102203156333e-05
+            },
+            {
+              "value": "real_market_movement",
+              "probability": 0.002132646506652236,
+              "raw_probability": 0.002132646506652236
+            },
+            {
+              "value": "insufficient_evidence",
+              "probability": 0.974928081035614,
+              "raw_probability": 0.974928081035614
+            }
+          ],
+          "logits": [
+            33.0,
+            25.375,
+            30.625,
+            36.75
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "temperature": 1.0
+        },
+        "escalate": {
+          "value": true,
+          "confidence": 0.998498797416687,
+          "probability": 0.998498797416687,
+          "raw_probability": 0.998498797416687,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.0015011822106316686,
+              "raw_probability": 0.0015011822106316686
+            },
+            {
+              "value": true,
+              "probability": 0.998498797416687,
+              "raw_probability": 0.998498797416687
+            }
+          ],
+          "logits": [
+            33.75,
+            40.25
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        }
+      },
+      "shared_prefix": {
+        "data_issue": {
+          "value": true,
+          "confidence": 0.9890130758285522,
+          "probability": 0.9890130758285522,
+          "raw_probability": 0.9890130758285522,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.010986942797899246,
+              "raw_probability": 0.010986942797899246
+            },
+            {
+              "value": true,
+              "probability": 0.9890130758285522,
+              "raw_probability": 0.9890130758285522
+            }
+          ],
+          "logits": [
+            34.25,
+            38.75
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "confidence": 0.9597170948982239,
+          "probability": 0.9597170948982239,
+          "raw_probability": 0.9597170948982239,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": "missing_stores",
+              "probability": 0.037212271243333817,
+              "raw_probability": 0.037212271243333817
+            },
+            {
+              "value": "missing_products",
+              "probability": 1.6028907339205034e-05,
+              "raw_probability": 1.6028907339205034e-05
+            },
+            {
+              "value": "real_market_movement",
+              "probability": 0.003054569009691477,
+              "raw_probability": 0.003054569009691477
+            },
+            {
+              "value": "insufficient_evidence",
+              "probability": 0.9597170948982239,
+              "raw_probability": 0.9597170948982239
+            }
+          ],
+          "logits": [
+            33.25,
+            25.5,
+            30.75,
+            36.5
+          ],
+          "candidate_mass": 0.9999961853027344,
+          "token_ids": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "temperature": 1.0
+        },
+        "escalate": {
+          "value": true,
+          "confidence": 0.9988304972648621,
+          "probability": 0.9988304972648621,
+          "raw_probability": 0.9988304972648621,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.0011695101857185364,
+              "raw_probability": 0.0011695101857185364
+            },
+            {
+              "value": true,
+              "probability": 0.9988304972648621,
+              "raw_probability": 0.9988304972648621
+            }
+          ],
+          "logits": [
+            33.75,
+            40.5
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        }
+      }
+    },
+    {
+      "case": "products",
+      "field_count": 3,
+      "decision_disagreements": 0,
+      "max_logit_delta": 0.375,
+      "max_probability_delta": 0.06212568283081055,
+      "max_candidate_mass_delta": 0.0,
+      "batched": {
+        "data_issue": {
+          "value": true,
+          "confidence": 0.9914224743843079,
+          "probability": 0.9914224743843079,
+          "raw_probability": 0.9914224743843079,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.008577484637498856,
+              "raw_probability": 0.008577484637498856
+            },
+            {
+              "value": true,
+              "probability": 0.9914224743843079,
+              "raw_probability": 0.9914224743843079
+            }
+          ],
+          "logits": [
+            33.0,
+            37.75
+          ],
+          "candidate_mass": 0.9999961853027344,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        },
+        "cause": {
+          "value": "missing_products",
+          "confidence": 0.4995707869529724,
+          "probability": 0.4995707869529724,
+          "raw_probability": 0.4995707869529724,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": "missing_stores",
+              "probability": 0.0008510787156410515,
+              "raw_probability": 0.0008510787156410515
+            },
+            {
+              "value": "missing_products",
+              "probability": 0.4995707869529724,
+              "raw_probability": 0.4995707869529724
+            },
+            {
+              "value": "real_market_movement",
+              "probability": 7.363273653027136e-06,
+              "raw_probability": 7.363273653027136e-06
+            },
+            {
+              "value": "insufficient_evidence",
+              "probability": 0.4995707869529724,
+              "raw_probability": 0.4995707869529724
+            }
+          ],
+          "logits": [
+            29.375,
+            35.75,
+            24.625,
+            35.75
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "temperature": 1.0
+        },
+        "escalate": {
+          "value": true,
+          "confidence": 0.9996646642684937,
+          "probability": 0.9996646642684937,
+          "raw_probability": 0.9996646642684937,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.00033535013790242374,
+              "raw_probability": 0.00033535013790242374
+            },
+            {
+              "value": true,
+              "probability": 0.9996646642684937,
+              "raw_probability": 0.9996646642684937
+            }
+          ],
+          "logits": [
+            33.0,
+            41.0
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        }
+      },
+      "shared_prefix": {
+        "data_issue": {
+          "value": true,
+          "confidence": 0.9890130758285522,
+          "probability": 0.9890130758285522,
+          "raw_probability": 0.9890130758285522,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.010986942797899246,
+              "raw_probability": 0.010986942797899246
+            },
+            {
+              "value": true,
+              "probability": 0.9890130758285522,
+              "raw_probability": 0.9890130758285522
+            }
+          ],
+          "logits": [
+            33.0,
+            37.5
+          ],
+          "candidate_mass": 0.9999961853027344,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        },
+        "cause": {
+          "value": "missing_products",
+          "confidence": 0.561696469783783,
+          "probability": 0.561696469783783,
+          "raw_probability": 0.561696469783783,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": "missing_stores",
+              "probability": 0.0008444765117019415,
+              "raw_probability": 0.0008444765117019415
+            },
+            {
+              "value": "missing_products",
+              "probability": 0.561696469783783,
+              "raw_probability": 0.561696469783783
+            },
+            {
+              "value": "real_market_movement",
+              "probability": 9.38128687266726e-06,
+              "raw_probability": 9.38128687266726e-06
+            },
+            {
+              "value": "insufficient_evidence",
+              "probability": 0.4374496638774872,
+              "raw_probability": 0.4374496638774872
+            }
+          ],
+          "logits": [
+            29.5,
+            36.0,
+            25.0,
+            35.75
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "temperature": 1.0
+        },
+        "escalate": {
+          "value": true,
+          "confidence": 0.9996646642684937,
+          "probability": 0.9996646642684937,
+          "raw_probability": 0.9996646642684937,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.00033535013790242374,
+              "raw_probability": 0.00033535013790242374
+            },
+            {
+              "value": true,
+              "probability": 0.9996646642684937,
+              "raw_probability": 0.9996646642684937
+            }
+          ],
+          "logits": [
+            33.0,
+            41.0
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        }
+      }
+    },
+    {
+      "case": "market",
+      "field_count": 3,
+      "decision_disagreements": 0,
+      "max_logit_delta": 0.25,
+      "max_probability_delta": 0.010098990052938461,
+      "max_candidate_mass_delta": 0.0,
+      "batched": {
+        "data_issue": {
+          "value": true,
+          "confidence": 0.9626730680465698,
+          "probability": 0.9626730680465698,
+          "raw_probability": 0.9626730680465698,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.037326883524656296,
+              "raw_probability": 0.037326883524656296
+            },
+            {
+              "value": true,
+              "probability": 0.9626730680465698,
+              "raw_probability": 0.9626730680465698
+            }
+          ],
+          "logits": [
+            34.5,
+            37.75
+          ],
+          "candidate_mass": 0.9999961853027344,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "confidence": 0.8173762559890747,
+          "probability": 0.8173762559890747,
+          "raw_probability": 0.8173762559890747,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": "missing_stores",
+              "probability": 0.00021354654745664448,
+              "raw_probability": 0.00021354654745664448
+            },
+            {
+              "value": "missing_products",
+              "probability": 2.890038194891531e-05,
+              "raw_probability": 2.890038194891531e-05
+            },
+            {
+              "value": "real_market_movement",
+              "probability": 0.1823812872171402,
+              "raw_probability": 0.1823812872171402
+            },
+            {
+              "value": "insufficient_evidence",
+              "probability": 0.8173762559890747,
+              "raw_probability": 0.8173762559890747
+            }
+          ],
+          "logits": [
+            28.0,
+            26.0,
+            34.75,
+            36.25
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "temperature": 1.0
+        },
+        "escalate": {
+          "value": true,
+          "confidence": 0.9399133324623108,
+          "probability": 0.9399133324623108,
+          "raw_probability": 0.9399133324623108,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.06008664518594742,
+              "raw_probability": 0.06008664518594742
+            },
+            {
+              "value": true,
+              "probability": 0.9399133324623108,
+              "raw_probability": 0.9399133324623108
+            }
+          ],
+          "logits": [
+            36.75,
+            39.5
+          ],
+          "candidate_mass": 0.9999961853027344,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        }
+      },
+      "shared_prefix": {
+        "data_issue": {
+          "value": true,
+          "confidence": 0.9525741338729858,
+          "probability": 0.9525741338729858,
+          "raw_probability": 0.9525741338729858,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.04742587357759476,
+              "raw_probability": 0.04742587357759476
+            },
+            {
+              "value": true,
+              "probability": 0.9525741338729858,
+              "raw_probability": 0.9525741338729858
+            }
+          ],
+          "logits": [
+            34.75,
+            37.75
+          ],
+          "candidate_mass": 0.9999961853027344,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "confidence": 0.8173695206642151,
+          "probability": 0.8173695206642151,
+          "raw_probability": 0.8173695206642151,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": "missing_stores",
+              "probability": 0.00021354480122681707,
+              "raw_probability": 0.00021354480122681707
+            },
+            {
+              "value": "missing_products",
+              "probability": 3.7108518881723285e-05,
+              "raw_probability": 3.7108518881723285e-05
+            },
+            {
+              "value": "real_market_movement",
+              "probability": 0.18237978219985962,
+              "raw_probability": 0.18237978219985962
+            },
+            {
+              "value": "insufficient_evidence",
+              "probability": 0.8173695206642151,
+              "raw_probability": 0.8173695206642151
+            }
+          ],
+          "logits": [
+            27.75,
+            26.0,
+            34.5,
+            36.0
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "temperature": 1.0
+        },
+        "escalate": {
+          "value": true,
+          "confidence": 0.9399133324623108,
+          "probability": 0.9399133324623108,
+          "raw_probability": 0.9399133324623108,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.06008664518594742,
+              "raw_probability": 0.06008664518594742
+            },
+            {
+              "value": true,
+              "probability": 0.9399133324623108,
+              "raw_probability": 0.9399133324623108
+            }
+          ],
+          "logits": [
+            37.0,
+            39.75
+          ],
+          "candidate_mass": 0.9999961853027344,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        }
+      }
+    },
+    {
+      "case": "unknown",
+      "field_count": 3,
+      "decision_disagreements": 0,
+      "max_logit_delta": 0.5,
+      "max_probability_delta": 0.06028282642364502,
+      "max_candidate_mass_delta": 3.814697265625e-06,
+      "batched": {
+        "data_issue": {
+          "value": true,
+          "confidence": 0.622459352016449,
+          "probability": 0.622459352016449,
+          "raw_probability": 0.622459352016449,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.3775406777858734,
+              "raw_probability": 0.3775406777858734
+            },
+            {
+              "value": true,
+              "probability": 0.622459352016449,
+              "raw_probability": 0.622459352016449
+            }
+          ],
+          "logits": [
+            36.0,
+            36.5
+          ],
+          "candidate_mass": 0.9999847412109375,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "confidence": 0.9999997615814209,
+          "probability": 0.9999997615814209,
+          "raw_probability": 0.9999997615814209,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": "missing_stores",
+              "probability": 8.764246217651817e-08,
+              "raw_probability": 8.764246217651817e-08
+            },
+            {
+              "value": "missing_products",
+              "probability": 8.764246217651817e-08,
+              "raw_probability": 8.764246217651817e-08
+            },
+            {
+              "value": "real_market_movement",
+              "probability": 3.850741059352458e-09,
+              "raw_probability": 3.850741059352458e-09
+            },
+            {
+              "value": "insufficient_evidence",
+              "probability": 0.9999997615814209,
+              "raw_probability": 0.9999997615814209
+            }
+          ],
+          "logits": [
+            25.5,
+            25.5,
+            22.375,
+            41.75
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "temperature": 1.0
+        },
+        "escalate": {
+          "value": false,
+          "confidence": 0.622459352016449,
+          "probability": 0.622459352016449,
+          "raw_probability": 0.622459352016449,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.622459352016449,
+              "raw_probability": 0.622459352016449
+            },
+            {
+              "value": true,
+              "probability": 0.3775406777858734,
+              "raw_probability": 0.3775406777858734
+            }
+          ],
+          "logits": [
+            39.25,
+            38.75
+          ],
+          "candidate_mass": 0.9999961853027344,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        }
+      },
+      "shared_prefix": {
+        "data_issue": {
+          "value": true,
+          "confidence": 0.562176525592804,
+          "probability": 0.562176525592804,
+          "raw_probability": 0.562176525592804,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.43782350420951843,
+              "raw_probability": 0.43782350420951843
+            },
+            {
+              "value": true,
+              "probability": 0.562176525592804,
+              "raw_probability": 0.562176525592804
+            }
+          ],
+          "logits": [
+            35.75,
+            36.0
+          ],
+          "candidate_mass": 0.9999847412109375,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        },
+        "cause": {
+          "value": "insufficient_evidence",
+          "confidence": 0.9999997615814209,
+          "probability": 0.9999997615814209,
+          "raw_probability": 0.9999997615814209,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": "missing_stores",
+              "probability": 9.931191868872702e-08,
+              "raw_probability": 9.931191868872702e-08
+            },
+            {
+              "value": "missing_products",
+              "probability": 8.764246217651817e-08,
+              "raw_probability": 8.764246217651817e-08
+            },
+            {
+              "value": "real_market_movement",
+              "probability": 4.363461147960379e-09,
+              "raw_probability": 4.363461147960379e-09
+            },
+            {
+              "value": "insufficient_evidence",
+              "probability": 0.9999997615814209,
+              "raw_probability": 0.9999997615814209
+            }
+          ],
+          "logits": [
+            25.625,
+            25.5,
+            22.5,
+            41.75
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55,
+            56,
+            57
+          ],
+          "temperature": 1.0
+        },
+        "escalate": {
+          "value": false,
+          "confidence": 0.6791787147521973,
+          "probability": 0.6791787147521973,
+          "raw_probability": 0.6791787147521973,
+          "probability_kind": "raw",
+          "distribution": [
+            {
+              "value": false,
+              "probability": 0.6791787147521973,
+              "raw_probability": 0.6791787147521973
+            },
+            {
+              "value": true,
+              "probability": 0.32082128524780273,
+              "raw_probability": 0.32082128524780273
+            }
+          ],
+          "logits": [
+            39.25,
+            38.5
+          ],
+          "candidate_mass": 1.0,
+          "token_ids": [
+            54,
+            55
+          ],
+          "temperature": 1.0
+        }
+      }
+    }
+  ],
+  "rows": [
+    {
+      "context_tokens": 128,
+      "requested_context_tokens": 128,
+      "fields": 1,
+      "prefix_tokens": 201,
+      "prompt_tokens": [
+        202
+      ],
+      "transformer_token_positions": {
+        "batched": 202,
+        "shared_prefix": 202
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 29.841235002095345,
+          "p95_ms": 32.31044499989366
+        },
+        "shared_prefix": {
+          "median_ms": 55.90045300050406,
+          "p95_ms": 55.98976199689787
+        }
+      },
+      "speedup": 0.5338281427133742,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 32.31044499989366,
+          "peak_allocated_bytes": 5124071424
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 55.98976199689787,
+          "peak_allocated_bytes": 5132662784
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.25,
+            "max_probability_delta": 0.0018846988677978516,
+            "max_candidate_mass_delta": 0.0
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 55.79128600220429,
+          "peak_allocated_bytes": 5132662784
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 29.835994995664805,
+          "peak_allocated_bytes": 5124071424
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.25,
+            "max_probability_delta": 0.0018846988677978516,
+            "max_candidate_mass_delta": 0.0
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 29.841235002095345,
+          "peak_allocated_bytes": 5124071424
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 55.90045300050406,
+          "peak_allocated_bytes": 5132662784
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.25,
+            "max_probability_delta": 0.0018846988677978516,
+            "max_candidate_mass_delta": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context_tokens": 128,
+      "requested_context_tokens": 128,
+      "fields": 4,
+      "prefix_tokens": 173,
+      "prompt_tokens": [
+        202,
+        223,
+        200,
+        202
+      ],
+      "transformer_token_positions": {
+        "batched": 892,
+        "shared_prefix": 373
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 57.6075069984654,
+          "p95_ms": 57.78506400383776
+        },
+        "shared_prefix": {
+          "median_ms": 69.18035100534325,
+          "p95_ms": 69.6705199952703
+        }
+      },
+      "speedup": 0.8327148700649984,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 57.6075069984654,
+          "peak_allocated_bytes": 5163543040
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 69.18035100534325,
+          "peak_allocated_bytes": 5172570112
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.0018846988677978516,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 69.6705199952703,
+          "peak_allocated_bytes": 5172570112
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 57.78506400383776,
+          "peak_allocated_bytes": 5163543040
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.0018846988677978516,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 57.10300200007623,
+          "peak_allocated_bytes": 5163543040
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 68.97591300366912,
+          "peak_allocated_bytes": 5172570112
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.0018846988677978516,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        }
+      ]
+    },
+    {
+      "context_tokens": 128,
+      "requested_context_tokens": 128,
+      "fields": 16,
+      "prefix_tokens": 173,
+      "prompt_tokens": [
+        202,
+        223,
+        200,
+        202,
+        223,
+        200,
+        202,
+        223,
+        200,
+        202,
+        223,
+        200,
+        202,
+        223,
+        200,
+        202
+      ],
+      "transformer_token_positions": {
+        "batched": 3568,
+        "shared_prefix": 973
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 231.3089780000155,
+          "p95_ms": 232.595866000338
+        },
+        "shared_prefix": {
+          "median_ms": 192.94176399853313,
+          "p95_ms": 193.9763749978738
+        }
+      },
+      "speedup": 1.1988538572798269,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 231.3089780000155,
+          "peak_allocated_bytes": 5165650432
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 192.29058000200894,
+          "peak_allocated_bytes": 5174677504
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 192.94176399853313,
+          "peak_allocated_bytes": 5174677504
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 231.1157519943663,
+          "peak_allocated_bytes": 5165650432
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 232.595866000338,
+          "peak_allocated_bytes": 5165650432
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 193.9763749978738,
+          "peak_allocated_bytes": 5174677504
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        }
+      ]
+    },
+    {
+      "context_tokens": 1024,
+      "requested_context_tokens": 1024,
+      "fields": 1,
+      "prefix_tokens": 1157,
+      "prompt_tokens": [
+        1158
+      ],
+      "transformer_token_positions": {
+        "batched": 1158,
+        "shared_prefix": 1158
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 79.24029599962523,
+          "p95_ms": 79.44637699984014
+        },
+        "shared_prefix": {
+          "median_ms": 104.75672499887878,
+          "p95_ms": 105.13054400507826
+        }
+      },
+      "speedup": 0.7564220435535126,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 79.44637699984014,
+          "peak_allocated_bytes": 5177291264
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 104.75672499887878,
+          "peak_allocated_bytes": 5227047424
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.0,
+            "max_probability_delta": 0.0,
+            "max_candidate_mass_delta": 0.0
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 103.61090399965178,
+          "peak_allocated_bytes": 5227047424
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 79.24029599962523,
+          "peak_allocated_bytes": 5177291264
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.0,
+            "max_probability_delta": 0.0,
+            "max_candidate_mass_delta": 0.0
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 78.94150100037223,
+          "peak_allocated_bytes": 5177291264
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 105.13054400507826,
+          "peak_allocated_bytes": 5227047424
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.0,
+            "max_probability_delta": 0.0,
+            "max_candidate_mass_delta": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context_tokens": 1024,
+      "requested_context_tokens": 1024,
+      "fields": 4,
+      "prefix_tokens": 1129,
+      "prompt_tokens": [
+        1158,
+        1179,
+        1156,
+        1158
+      ],
+      "transformer_token_positions": {
+        "batched": 4716,
+        "shared_prefix": 1329
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 294.6901280010934,
+          "p95_ms": 295.9319020010298
+        },
+        "shared_prefix": {
+          "median_ms": 141.31902899680426,
+          "p95_ms": 141.74463599920273
+        }
+      },
+      "speedup": 2.085282711698772,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 295.9319020010298,
+          "peak_allocated_bytes": 5375866880
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 141.74463599920273,
+          "peak_allocated_bytes": 5410886656
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 0.0
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 141.31902899680426,
+          "peak_allocated_bytes": 5410886656
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 294.2331319936784,
+          "peak_allocated_bytes": 5375866880
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 0.0
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 294.6901280010934,
+          "peak_allocated_bytes": 5375866880
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 141.17226999951527,
+          "peak_allocated_bytes": 5410886656
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context_tokens": 1024,
+      "requested_context_tokens": 1024,
+      "fields": 16,
+      "prefix_tokens": 1129,
+      "prompt_tokens": [
+        1158,
+        1179,
+        1156,
+        1158,
+        1179,
+        1156,
+        1158,
+        1179,
+        1156,
+        1158,
+        1179,
+        1156,
+        1158,
+        1179,
+        1156,
+        1158
+      ],
+      "transformer_token_positions": {
+        "batched": 18864,
+        "shared_prefix": 1929
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 1184.302925998054,
+          "p95_ms": 1184.9162790022092
+        },
+        "shared_prefix": {
+          "median_ms": 348.85948000010103,
+          "p95_ms": 348.9492400040035
+        }
+      },
+      "speedup": 3.3947849890669763,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 1182.8878349988372,
+          "peak_allocated_bytes": 5377974272
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 348.31912600202486,
+          "peak_allocated_bytes": 5413327872
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 348.85948000010103,
+          "peak_allocated_bytes": 5413327872
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 1184.302925998054,
+          "peak_allocated_bytes": 5377974272
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 1184.9162790022092,
+          "peak_allocated_bytes": 5377974272
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 348.9492400040035,
+          "peak_allocated_bytes": 5413327872
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.5,
+            "max_probability_delta": 0.003922641277313232,
+            "max_candidate_mass_delta": 3.814697265625e-06
+          }
+        }
+      ]
+    },
+    {
+      "context_tokens": 4096,
+      "requested_context_tokens": 4096,
+      "fields": 1,
+      "prefix_tokens": 4434,
+      "prompt_tokens": [
+        4435
+      ],
+      "transformer_token_positions": {
+        "batched": 4435,
+        "shared_prefix": 4435
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 314.79458999820054,
+          "p95_ms": 315.2576479988056
+        },
+        "shared_prefix": {
+          "median_ms": 339.974861999508,
+          "p95_ms": 340.22302200173726
+        }
+      },
+      "speedup": 0.9259349004417159,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 314.79458999820054,
+          "peak_allocated_bytes": 5353061888
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 340.22302200173726,
+          "peak_allocated_bytes": 5544790528
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.0,
+            "max_probability_delta": 0.0,
+            "max_candidate_mass_delta": 0.0
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 338.73538299667416,
+          "peak_allocated_bytes": 5544790528
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 314.6566979994532,
+          "peak_allocated_bytes": 5353061888
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.0,
+            "max_probability_delta": 0.0,
+            "max_candidate_mass_delta": 0.0
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 315.2576479988056,
+          "peak_allocated_bytes": 5353061888
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 339.974861999508,
+          "peak_allocated_bytes": 5544790528
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 1,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.0,
+            "max_probability_delta": 0.0,
+            "max_candidate_mass_delta": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "context_tokens": 4096,
+      "requested_context_tokens": 4096,
+      "fields": 4,
+      "prefix_tokens": 4406,
+      "prompt_tokens": [
+        4435,
+        4456,
+        4433,
+        4435
+      ],
+      "transformer_token_positions": {
+        "batched": 17824,
+        "shared_prefix": 4606
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 1474.1224919998785,
+          "p95_ms": 1476.1348859974532
+        },
+        "shared_prefix": {
+          "median_ms": 452.62437500059605,
+          "p95_ms": 452.6969329963322
+        }
+      },
+      "speedup": 3.25683408454955,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 1468.5958879999816,
+          "peak_allocated_bytes": 6155492864
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 450.66330899862805,
+          "peak_allocated_bytes": 6226763776
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.75,
+            "max_probability_delta": 0.010098990052938461,
+            "max_candidate_mass_delta": 7.62939453125e-06
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 452.62437500059605,
+          "peak_allocated_bytes": 6226763776
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 1474.1224919998785,
+          "peak_allocated_bytes": 6155492864
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.75,
+            "max_probability_delta": 0.010098990052938461,
+            "max_candidate_mass_delta": 7.62939453125e-06
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 1476.1348859974532,
+          "peak_allocated_bytes": 6155492864
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 452.6969329963322,
+          "peak_allocated_bytes": 6226763776
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 4,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.75,
+            "max_probability_delta": 0.010098990052938461,
+            "max_candidate_mass_delta": 7.62939453125e-06
+          }
+        }
+      ]
+    },
+    {
+      "context_tokens": 4096,
+      "requested_context_tokens": 4096,
+      "fields": 16,
+      "prefix_tokens": 4406,
+      "prompt_tokens": [
+        4435,
+        4456,
+        4433,
+        4435,
+        4456,
+        4433,
+        4435,
+        4456,
+        4433,
+        4435,
+        4456,
+        4433,
+        4435,
+        4456,
+        4433,
+        4435
+      ],
+      "transformer_token_positions": {
+        "batched": 71296,
+        "shared_prefix": 5206
+      },
+      "timing": {
+        "batched": {
+          "median_ms": 5936.439552002412,
+          "p95_ms": 5938.512718996208
+        },
+        "shared_prefix": {
+          "median_ms": 928.1802200057427,
+          "p95_ms": 949.356021003041
+        }
+      },
+      "speedup": 6.3957833016153725,
+      "measurements": [
+        {
+          "repeat": 0,
+          "method": "batched",
+          "latency_ms": 5919.9352269934025,
+          "peak_allocated_bytes": 6157600256
+        },
+        {
+          "repeat": 0,
+          "method": "shared_prefix",
+          "latency_ms": 928.1802200057427,
+          "peak_allocated_bytes": 6229485568
+        },
+        {
+          "repeat": 0,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.75,
+            "max_probability_delta": 0.010098990052938461,
+            "max_candidate_mass_delta": 7.62939453125e-06
+          }
+        },
+        {
+          "repeat": 1,
+          "method": "shared_prefix",
+          "latency_ms": 927.0411710022017,
+          "peak_allocated_bytes": 6229485568
+        },
+        {
+          "repeat": 1,
+          "method": "batched",
+          "latency_ms": 5936.439552002412,
+          "peak_allocated_bytes": 6157600256
+        },
+        {
+          "repeat": 1,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.75,
+            "max_probability_delta": 0.010098990052938461,
+            "max_candidate_mass_delta": 7.62939453125e-06
+          }
+        },
+        {
+          "repeat": 2,
+          "method": "batched",
+          "latency_ms": 5938.512718996208,
+          "peak_allocated_bytes": 6157600256
+        },
+        {
+          "repeat": 2,
+          "method": "shared_prefix",
+          "latency_ms": 949.356021003041,
+          "peak_allocated_bytes": 6229485568
+        },
+        {
+          "repeat": 2,
+          "parity": {
+            "field_count": 16,
+            "decision_disagreements": 0,
+            "max_logit_delta": 0.75,
+            "max_probability_delta": 0.010098990052938461,
+            "max_candidate_mass_delta": 7.62939453125e-06
+          }
+        }
+      ]
+    }
+  ]
+}
